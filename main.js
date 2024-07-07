@@ -44,10 +44,6 @@ const askQuestion = async () => {
 };
 const main = async () => {
     const { flavor, topping, holder } = await askQuestion();
-    //  console.log(`\n\tThis is your selection`);
-    //  console.log(`\t1: ${flavor.flavor}`);
-    //  console.log(`\t2: ${holder.holder}`);
-    //  console.log(`\t3: ${topping.topping}`);
     try {
         await order(1000, () => console.log(chalk.yellowBright(`\n\tThis is your selection`)));
         await order(1000, () => console.log(chalk.bold.rgb(255, 126, 5)(`\t1: ${flavor.flavor}`)));
@@ -75,7 +71,7 @@ const main = async () => {
         }
     }
     finally {
-        console.log(chalk.bold.redBright("\t======> Shop is closed <======"));
+        console.log(chalk.bold.redBright("\t====..r==> Shop is closed <======"));
         console.log(chalk.italic.bold.rgb(110, 163, 64)("\n\tThanks for Visiting Our Shop"));
     }
 };
